@@ -11,7 +11,7 @@ class LoginContr extends Login{
     private function login(){
         if($this->emptyInput() == false){
             $error = "fill in the input";
-            header("location: ../loginUser.php?error={$error}");
+            header("location: ../view/loginUser.php?error={$error}");
             exit();
         }
         return true;

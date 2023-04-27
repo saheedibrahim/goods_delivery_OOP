@@ -14,7 +14,7 @@
     <p>Lastname: <?php echo $_SESSION['user_lname'] ?></p>
     <p>Phone number: <?php echo $_SESSION['user_phone'] ?></p>
     <p>User ID: <?php echo $_SESSION['user_id'] ?></p>
-    <p><a href="./includes/logoutUser.php">Logout</a></p>
-    <p><a href="./includes/signupOrder.php">Order</a></p>
+    <p><a href="./logoutUser.php">Logout</a></p>
+    <p><a href="./signupOrder.php">Order</a></p>
 </body>
 </html>

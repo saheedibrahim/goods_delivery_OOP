@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .error{color: #ff0000;}
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,8 +16,8 @@
     <p>UserID <?php echo $_SESSION["user_id"]; ?></p>
     <p><a href="./logoutUser.php">Logout</a></p>
     <p><a href="../home.php">Home</a></p>
-
-   <form action="../controllers/signupOrder-pro.contr.php" method="post">
+    <p class="error"><?=isset($_GET['error']) ? $_GET['error'] : " "; ?></p>
+   <form action="../controller/signupOrder-pro.contr.php" method="post">
      <select name="destination" id="" required>
             <option value="select destination">select destination</option>
             <option value="Lagos">Lagos</option>

@@ -7,12 +7,12 @@ if(isset($_POST["submit"])){
     $pwd = $_POST["pwd"];
     $pwdConfirm = $_POST["pwdConfirm"];
 
-    include "../class/dbh.contr.php";
-    include "../class/signup.php";
-    include "./signup-contr.contr.php";
+    include "../model/dbh.php";
+    include "../model/signup.php";
+    include "./signup.contr.php";
     $user = new SignupContr($fname, $lname, $phone, $email, $pwd, $pwdConfirm);
     $user->signupUser();
-    echo"<a href='../includes/loginUser.php'>Login</a>";
+    echo"<a href='../view/loginUser.php'>Login</a>";
 }
 
 

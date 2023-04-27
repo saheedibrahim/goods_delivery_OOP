@@ -19,7 +19,7 @@ class Login extends Dbh{
                 $_SESSION['user_email'] = $row[0]['users_email'];
             } else {
                 $error = "Invalid username or password";
-                header("location: ../includes/loginUser.php?error={$error}");
+                header("location: ../view/loginUser.php?error={$error}");
                 exit();
             }
         }
@@ -36,7 +36,7 @@ class Login extends Dbh{
             $_SESSION['user_email'] = $row[0]['dispatcher_email'];
         } else {
             $error = "Invalid username or password";
-            header("location: ../loginDispatcher.php?error={$error}");
+            header("location: ../view/loginDispatcher.php?error={$error}");
             exit();
         }
     }

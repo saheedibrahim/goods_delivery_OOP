@@ -6,14 +6,13 @@ if(isset($_POST["submit"])){
     $email = $_POST["email"];
     $pwd = $_POST["pwd"];
     $pwdConfirm = $_POST["pwdConfirm"];
-
-    
-    include "../class/dbh.contr.php";
-    include "../class/signup.php";
-    include "./signup-contr.contr.php";
+   
+    include "../model/dbh.php";
+    include "../model/signup.php";
+    include "./signup.contr.php";
     $dispatcher = new SignupContr($fname, $lname, $phone, $email, $pwd, $pwdConfirm);
     $dispatcher->signupDispatcher();
-    echo"<a href='../includes/loginUser.php'>Login</a>";
+    echo"<a href='../view/loginUser.php'>Login</a>";
 
 }
 

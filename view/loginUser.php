@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <p id="error"><?=isset($_GET['error'])? $_GET["error"] : ""; ?></p>
-    <form action="../controllers/loginUser.inc.php" name="signup"method="post">
+    <p class="error"><?=isset($_GET['error'])? $_GET["error"] : ""; ?></p>
+    <form action="../controller/loginUser-pro.php" name="signup"method="post">
         <input type="text" name="email" placeholder="Email"><?php echo ""; ?><br><br>
         <input type="password" name="pwd" placeholder="Password"><?php echo ""; ?><br><br>
         <input type="submit" name="submit" value="Login">
     </form>
-    <p>Don't have an account? <a href="../signupUser.php">Signup</a></p>
+    <p>Don't have an account? <a href="../index.php">Signup</a></p>
 
 <!-- <script>
     function inputCheck(){
